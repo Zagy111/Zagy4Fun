@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #26332b;
+  background-color: #f3f7f3;
+}
+
+header {
+  padding: 24px;
+  text-align: center;
+  color: white;
+  background-color: #287a4b;
+}
+
+nav {
+  margin-top: 18px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  margin: 24px 0;
+}
+
+#rowery article {
+  margin: 12px 0;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid #d5e2d8;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 14px;
+  color: white;
+  background-color: #287a4b;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d5c37;
+}
+
+#akcesoria,
+#kontakt {
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+}
+#menu {
+ position: relative;
+ border: none;
+ background: transparent;
+ padding: 0;
+ cursor: pointer;
+ outline-offset: 4px;
+ transition: filter 250ms;
+ user-select: none;
+ touch-action: manipulation;
+ margin-top: 20px;
+}
+.shadow {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 12px;
+ background: hsl(0deg 0% 0% / 0.25);
+ will-change: transform;
+ transform: translateY(2px);
+ transition: transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 12px;
+ background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.front {
+ display: block;
+ position: relative;
+ padding: 12px 27px;
+ border-radius: 12px;
+ font-size: 1.1rem;
+ color: white;
+ background: hsl(345deg 100% 47%);
+ will-change: transform;
+ transform: translateY(-4px);
+ transition: transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+#menu:hover {
+ filter: brightness(110%);
+}
+
+#menu:hover .front {
+ transform: translateY(-6px);
+ transition: transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+#menu:active .front {
+ transform: translateY(-2px);
+ transition: transform 34ms;
+}
+
+#menu:hover .shadow {
+ transform: translateY(4px);
+ transition: transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+#menu:active .shadow {
+ transform: translateY(1px);
+ transition: transform 34ms;
+}
+
+#menu:focus:not(:focus-visible) {
+ outline: none;
+}
